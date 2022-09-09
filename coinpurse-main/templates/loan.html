@@ -1,0 +1,33 @@
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/navbar.css') }}">
+  </head>
+  <body style="background-image:url('../static/styles/loan1.webp');">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-dark bg-gradient">
+    <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <span style='overflow: hidden; white-space: nowrap;color:white;'>Hello, {{name}}</span>";
+    
+      <div class="navbar-nav" style="margin-left: 650px !important;">
+        <a class="nav-link" style="color: white !important; padding: 15px !important;" active aria-current="page" href="http://127.0.0.1:5000/home">Home</a>
+        <a class="nav-link" style="color: white !important; padding: 15px !important;"  href="http://127.0.0.1:5000/credit-card">Cards</a>
+        <a class="nav-link" style="color: white !important; padding: 15px !important;"  href="http://127.0.0.1:5000/loans">Loan</a>
+        <a class="nav-link" style="color: white !important; padding: 15px !important;"  href="http://127.0.0.1:5000/transfer">Transfer</a>
+        <a class="nav-link" style="color: white !important; padding: 15px !important;"  href="http://127.0.0.1:5000/transactions">Transactions</a>
+        <a class="nav-link" style="color: white !important; padding: 15px !important;"  href="http://127.0.0.1:5000/logout">Logout</a>
+        <span class="nav-link" style="color: white !important; padding: 15px !important;"  > Balance: ${{balance}}</span>";
+
+    </div>
+    </div>
+    </div>
+    </nav>
+    <div style="text-align:center; margin-top:100px;">
+    <h2>{{loan}}</h2> 
+    <a href="http://127.0.0.1:5000/apply-loan"><button class="btn btn-success">Apply For a Loan</button></a>
+    <a href="http://127.0.0.1:5000/settle-loan"><button class="btn btn-success">Settle Your Loan</button></a>
+    </div>
+  </body>
+  

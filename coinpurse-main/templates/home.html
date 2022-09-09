@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/home.css') }}">
+  </head>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-dark bg-gradient">
+    <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <span style='overflow: hidden; white-space: nowrap;color:white;'>Hello, {{name}}</span>";
+    
+      <div class="navbar-nav" style="margin-left: 650px !important;">
+        <a class="nav-link" style="color: white !important; padding: 15px !important;" active aria-current="page" href="http://127.0.0.1:5000/home">Home</a>
+        <a class="nav-link" style="color: white !important; padding: 15px !important;"  href="http://127.0.0.1:5000/credit-card">Cards</a>
+        <a class="nav-link" style="color: white !important; padding: 15px !important;"  href="http://127.0.0.1:5000/loans">Loan</a>
+        <a class="nav-link" style="color: white !important; padding: 15px !important;"  href="http://127.0.0.1:5000/transfer">Transfer</a>
+        <a class="nav-link" style="color: white !important; padding: 15px !important;"  href="http://127.0.0.1:5000/transactions">Transactions</a>
+        <a class="nav-link" style="color: white !important; padding: 15px !important;"  href="http://127.0.0.1:5000/logout">Logout</a>
+        <span class="nav-link" style="color: white !important; padding: 15px !important;"  > Balance: ${{balance}}</span>";
+      </div>
+    </div>
+    </div>
+    </nav>
+
+    <div style="border: 3px solid black; border-radius:15%;background-image: url('../static/styles/bank1.jpg'); width:500px; height:300px; margin-left: 500px; margin-top:100px;">
+      <div style="padding:30px; color:white; font-size:1.2rem;">Your Account Number: {{id}}</div>
+      <div style="padding:30px; color:white; font-size:1.2rem;">Name: {{name}}</div>
+      <div style="padding:30px; color:white; font-size:1.2rem;">Your Balance: ${{balance}}</div>
+    </div>
+
+</html>
